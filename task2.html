@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="task2.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="logo-container">
+        <img src="https://companieslogo.com/img/orig/TCS.NS-7401f1bd.png?t=1720244494" alt="TCS Logo">
+    </div>
+    <div class="marquee">
+        <span>TATA CONSULTING SERVICES HIRING</span>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="job-role">JOB ROLE</label>
+            <label><input type="radio" name="job-role" value="front-end"> Front End Developer</label>
+            <label><input type="radio" name="job-role" value="fullstack"> Fullstack Developer</label>
+            <label><input type="radio" name="job-role" value="mern"> MERN Developer</label>
+            <label><input type="radio" name="job-role" value="mern"> Quality Assurance Engineer</label>
+            <label><input type="radio" name="job-role" value="mern"> SAP Engineer</label>
+        </div>
+
+        <div class="checkbox-group form-group">
+            <label for="skills">PROGRAMMING LANGUAGES</label>
+            <label>
+                <input type="checkbox" name="skills" value="Python3">
+                <span></span> Python3
+            </label>
+            <label>
+                <input type="checkbox" name="skills" value="Java">
+                <span></span> Java
+            </label>
+            <label>
+                <input type="checkbox" name="skills" value="C,C++">
+                <span></span> C,C++
+            </label>
+            <label>
+                <input type="checkbox" name="skills" value="C#">
+                <span></span> C#
+            </label>
+            <label>
+                <input type="checkbox" name="skills" value="Dotnet">
+                <span></span> Dotnet
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="experience">Experience</label>
+            <select id="experience" name="experience">
+                <option value="1">1 year</option>
+                <option value="2">2 years</option>
+                <option value="3">3 years</option>
+                <option value="4">4 years</option>
+                <option value="5">5+ years</option>
+            </select>
+        </div>
+        <div class="additional-questions">
+            <h2>Additional Information</h2>
+            <label for="availability">Availability to Join:</label>
+            <input type="date" id="availability" name="availability">
+
+            <label for="notice-period">Notice Period (in days):</label>
+            <input type="number" id="notice-period" name="notice-period">
+
+            <label for="relocation">Willing to Relocate:</label>
+            <select id="relocation" name="relocation">
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+        </div>
+        <div class="form-group additional-info">
+            <label for="additional-info">Queries:</label>
+            <textarea id="additional-info" name="additional-info" rows="2"></textarea>
+        </div>
+
+        <button type="submit" class="submit">Submit</button>
+    </form>
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+</div>
+
+
+<script>
+window.addEventListener('scroll', function() {
+    var scrollTopButton = document.querySelector('.back-to-top');
+    if (window.scrollY > 100) {
+        scrollTopButton.style.display = 'block';
+    } else {
+        scrollTopButton.style.display = 'none';
+    }
+});
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+</script>
+</body>
+</html>
